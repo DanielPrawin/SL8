@@ -7,7 +7,7 @@ def built()
 {
   sh "mvn package"
 }
-def deploy()
+def deploy(jobName,idAddress,context)
 {
- scp ""
+  sh "scp /var/lib/jenkins/workspace/${jobName}/webapp/target/webapp.war ubuntu@${idAddress}:/var/lib/tomcat9/webapps/${context}.war"
 }
