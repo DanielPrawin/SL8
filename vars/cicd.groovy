@@ -3,7 +3,7 @@ def newgit(Repo)
   git "https://github.com/DanielPrawin/${Repo}.git"
 }
 
-def createWar()
+def build()
 {
   sh "mvn package"
 }
